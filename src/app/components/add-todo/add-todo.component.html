@@ -1,0 +1,46 @@
+<header class="addheader-bg">
+  <div class="column">
+
+    <div class="addtodobar">
+      <h1>
+        <span>Add Todo</span>
+      </h1>
+      <img class="iconlogo" src="../assets/images/Icon Calendar.svg" />
+    </div>
+
+
+
+  </div>
+  
+</header>
+<div class="spacer"></div>
+
+<form (ngSubmit)="onSubmit()" class="form">
+  <section>
+    <div class="column">
+
+      <h1 class="changetextcolor">New Task</h1>
+      <div class="spacer"></div>
+      <label class="labelclass" for="Title">
+        Title
+      </label>
+      <input type="text" id="title" placeholder="Titre" name="title" [(ngModel)]="title">
+      <label class="labelclass" for="description">Description </label>
+      <input type="text" id="description" placeholder="Description" name="description" [(ngModel)]="description">
+
+    </div>
+  </section>
+<footer>
+
+
+  <button  type="submit" (addTodo)="addTodo($event)">
+    <img class="addiconcheck" src="../assets/images/chechbutton.svg" />
+
+  </button>
+
+
+
+</footer>
+</form>
+
+
