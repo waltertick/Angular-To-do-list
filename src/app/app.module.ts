@@ -11,6 +11,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+import { ViewUrlComponent } from './components/view-url/view-url.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.co
     TodoComponent,
     TodoItemComponent,
     SearchfilterPipe,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    ViewUrlComponent
   ],
   imports: [
     BrowserModule,

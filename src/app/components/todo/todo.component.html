@@ -1,53 +1,50 @@
-
 <header class="header-bg">
-  <div class="column">
+    <div class="column">
 
-    <div class="todobar">
+        <div class="todobar">
 
-      <h1>
-        <span> Todolist</span>
+            <h1>
+                <span> Todolist</span>
 
-      </h1>
-      <img class="iconlogo" src="../assets/images/Icon Calendar.svg" />
+            </h1>
+            <img class="iconlogo" src="../assets/images/Icon Calendar.svg" />
 
+        </div>
+
+        <div class="searchDiv">
+
+            <input [ngStyle]="{'background-image': 'url(../assets/images/iconfinder_Find.png)'}" class="setInput" [(ngModel)]="searchValue" type="text" name="search" id="search">
+        </div>
     </div>
-
-    <div class="searchDiv">
-
-      <input [ngStyle]="{'background-image': 'url(../assets/images/iconfinder_Find.png)'}" class="setInput"
-        [(ngModel)]="searchValue" type="text" name="search" id="search">
-    </div>
-  </div>
 
 </header>
 <div class="spacer"></div>
 
- <section>
-   <div class="column">
+<section>
+    <div class="column">
         <div *ngFor="let td of todo | searchfilter:searchValue" class="classbutton">
-          <label class="container" for="{{td.id}}">
+            <label class="container" for="{{td.id}}">
             <div class="checkAndtitle">
               <input type="checkbox" id="{{td.id}}" [checked]="td.completed" >
-              <span class="leftset"> {{ td.title }} </span>
+              <span routerLink="/todo/{{td.id}}"   class="leftset"> {{ td.title }} </span>
               <span class="checkmark"></span>
               <span class="datehour">{{ td.duedate }}</span>
             </div>
           </label>
 
-          <span class="changefont">{{ td.description}}</span>
+            <span class="changefont"><img class="resizeIcon" src="../assets/images/delete.svg" alt="">Delete</span>
         </div>
     </div>
- </section>
+</section>
 <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
-  <footer  routerLinkActive="active">
+<footer routerLinkActive="active">
 
-    <a routerLink="/add-todo"  >
-        <div >
-          <img  class="addicon" src="../assets/images/addButton.svg" />
+    <a routerLink="/add-todo">
+        <div>
+            <img class="addicon" src="../assets/images/addButton.svg" />
 
         </div>
 
-      </a>
+    </a>
 
-  </footer>
-
+</footer>
