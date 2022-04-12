@@ -28,11 +28,11 @@
               <input type="checkbox" id="{{td.id}}" [checked]="td.completed" >
               <span routerLink="/todo/{{td.id}}"   class="leftset"> {{ td.title }} </span>
               <span class="checkmark"></span>
-              <span class="datehour">{{ td.duedate }}</span>
+              <span class="datehour">{{ td.duedate }} - <img class="resizeIcon" src="../assets/images/delete.svg" alt="">Delete</span>
             </div>
           </label>
 
-            <span class="changefont"><img class="resizeIcon" src="../assets/images/delete.svg" alt="">Delete</span>
+            <span class="changefont">{{ td.description }}</span>
         </div>
     </div>
 </section>
